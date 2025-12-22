@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7MP9MJ2');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7MP9MJ2" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <h1>Facebook Pixel Add to Cart Test</h1>
+
+    <!-- Form to collect Name and Email -->
+    <form id="userDetailsForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required><br><br>
+
+        <button type="button" id="addToCartButton">Add to Cart</button>
+
+        <button type="button" id="addToWishlistButton">Add to Wishlist</button>
+    </form>
+    <!-- JavaScript to trigger the addToCart event -->
+    <script>
+        document.getElementById('addToCartButton').addEventListener('click', function () {
+            // Get the values from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (!name || !email) {
+                alert('Please enter both your name and email.');
+                return;
+            }
+
+            // fbq('track', 'InitiateCheckout', {
+            //     content_type: 'destination',
+
+            //     content_ids: '[]',
+
+            //     // REQUIRED: city, don't use abbreviations
+            //     city: 'San Jose',
+
+            //     // REQUIRED: region, don't use abbreviations
+            //     region: 'California',
+
+            //     // REQUIRED: country, don't use abbreviations
+            //     country: 'USA',
+
+            //     // RECOMMENDED: number of adults
+            //     num_adults: '2'
+            // });
+        });
+        document.getElementById('addToWishlistButton').addEventListener('click', function () {
+            // Get the values from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (!name || !email) {
+                alert('Please enter both your name and email.');
+                return;
+            }
+
+            // fbq('track', 'Purchase', {
+            //     // Fire the 'Purchase' event on the booking or purchase confirmation page
+
+            //     // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+
+            //     // REQUIRED: DO NOT change this, must be set to 'destination'
+            //     content_ids: '[]',
+
+            //     // REQUIRED: city, don't use abbreviations
+            //     city: 'San Jose',
+
+            //     // REQUIRED: region, don't use abbreviations
+            //     region: 'California',
+
+            //     // REQUIRED: country, don't use abbreviations
+            //     country: 'USA',
+
+            //     // RECOMMENDED: number of adults
+            //     num_adults: '2',
+
+            //     // REQUIRED: total value of booking
+            //     value: '30',
+
+            //     // REQUIRED: currency of booking
+            //     currency: 'USD'
+            // });
+        });
+    </script>
+</body>
+
+</html>
