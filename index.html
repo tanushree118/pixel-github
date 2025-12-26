@@ -50,23 +50,23 @@
                 return;
             }
 
-            fbq('track', 'InitiateCheckout', {
-                content_type: 'destination',
+            // fbq('track', 'InitiateCheckout', {
+            //     content_type: 'destination',
 
-                content_ids: '[]',
+            //     content_ids: '[]',
 
-                // REQUIRED: city, don't use abbreviations
-                city: 'San Jose',
+            //     // REQUIRED: city, don't use abbreviations
+            //     city: 'San Jose',
 
-                // REQUIRED: region, don't use abbreviations
-                region: 'California',
+            //     // REQUIRED: region, don't use abbreviations
+            //     region: 'California',
 
-                // REQUIRED: country, don't use abbreviations
-                country: 'USA',
+            //     // REQUIRED: country, don't use abbreviations
+            //     country: 'USA',
 
-                // RECOMMENDED: number of adults
-                num_adults: '2'
-            });
+            //     // RECOMMENDED: number of adults
+            //     num_adults: '2'
+            // });
         });
         document.getElementById('addToWishlistButton').addEventListener('click', function () {
             // Get the values from the form
@@ -78,32 +78,32 @@
                 return;
             }
 
-            fbq('track', 'Purchase', {
-                // Fire the 'Purchase' event on the booking or purchase confirmation page
+            // fbq('track', 'Purchase', {
+            //     // Fire the 'Purchase' event on the booking or purchase confirmation page
 
-                // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
+            //     // IF YOU CHOOSE NOT TO USE A RECOMMENDED PARAM, THEN REMOVE IT, DON'T LEAVE IT EMPTY
 
-                // REQUIRED: DO NOT change this, must be set to 'destination'
-                content_ids: '[]',
+            //     // REQUIRED: DO NOT change this, must be set to 'destination'
+            //     content_ids: '[]',
 
-                // REQUIRED: city, don't use abbreviations
-                city: 'San Jose',
+            //     // REQUIRED: city, don't use abbreviations
+            //     city: 'San Jose',
 
-                // REQUIRED: region, don't use abbreviations
-                region: 'California',
+            //     // REQUIRED: region, don't use abbreviations
+            //     region: 'California',
 
-                // REQUIRED: country, don't use abbreviations
-                country: 'USA',
+            //     // REQUIRED: country, don't use abbreviations
+            //     country: 'USA',
 
-                // RECOMMENDED: number of adults
-                num_adults: '2',
+            //     // RECOMMENDED: number of adults
+            //     num_adults: '2',
 
-                // REQUIRED: total value of booking
-                value: '30',
+            //     // REQUIRED: total value of booking
+            //     value: '30',
 
-                // REQUIRED: currency of booking
-                currency: 'USD'
-            });
+            //     // REQUIRED: currency of booking
+            //     currency: 'USD'
+            // });
         });
     </script>
 </body>
